@@ -41,6 +41,6 @@ Here are some useful commands to try in the terminal:
 5. `$ pwd`: prints the current directory
 6. `$ mkdir <directory>`: creates a new folder in the current directory
 
-Example:
+Example: Creating then entering a new directory. Note the difference in the paths by using `$ pwd` before and after entering the new directory.
+
 ![image](assets/report-1/mkdir.PNG)
-Here I have used `$ pwd` to print my current directory. Then, I used `$ mkdir test` to create a new folder called test. After entering the test folder using `cd test`, using `$ pwd` shows the new current directory inside test.
