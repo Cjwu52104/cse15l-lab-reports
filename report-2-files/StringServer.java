@@ -2,16 +2,18 @@ import java.io.IOException;
 import java.net.URI;
 
 class Handler implements URLHandler {
-    // The one bit of state on the server: a number that will be manipulated by
-    // various requests.
-    String myStrings = "";
+    String sequence = "";
 
     @Override
     public String handleRequest(URI url) {
-        if (url.getPath().equals("/add-message")) {
-            String[] param = url.getQuery().split("=");
-            myStrings = myStrings + param[0] + "\n";
-            return myStrings;
+        if (url.getPath().contains("/add-message")) {
+            String[] parameters = url.getQuery().split("=");
+            if (parameters[0].equals("s")) {
+                sequence = sequence + parameters[1] + "\n";
+            } else {
+                return "Invalid parameter";
+            }
+            return sequence;
         } else {
             return "404 Not Found!";
         }
