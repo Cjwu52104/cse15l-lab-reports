@@ -59,8 +59,6 @@ Relevant args: url = http://localhost:4000/add-message?s=test123
 
 Affected values: sequence is set from "" to "test123\n".
 
----
-
 ### Incorrect input
 
 ![image](assets/report-2/hello.PNG)
@@ -69,3 +67,26 @@ Method(s) called: handleRequest
 Relevant args: url = http://localhost:4000/add-message?q=test123
 
 Affected values: sequence is unchanged, because the parameter name is 'q' instead of 's'.
+
+---
+
+## Part 2: Bug from Lab 3
+From ArrayExamples.java:
+```
+  static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = arr[arr.length - i - 1];
+    }
+  }
+```
+When reverseInPlace is passed an array that contains multiple different values, it does not produce the correct output:
+```
+  @Test
+  public void testReverseInPlace2() {
+    int[] input1 = { 1, 2, 3 };
+    ArrayExamples.reverseInPlace(input1);
+    assertArrayEquals(new int[] { 3, 2, 1 }, input1);
+  }
+```
+![image](/assets/report-2/failed-test)
+
