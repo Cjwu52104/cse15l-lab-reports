@@ -56,3 +56,15 @@ Keystrokes: `git add . <enter>, git commit -m "fixed bug", git push`
 
 Keystrokes: `cd .., rm -rf l<tab> <enter>, ls`
 
+### Shortcut References
+
+`<ctrl>+r` is used to search previous commands, meaning that once you type a command out the first time, you can search for it with a few characters the second time and simply press enter to save time.
+
+`<tab>` autofills the command/word you're typing if it's easily recognized by bash. For example, I did `nano L<tab> <enter>` in step 6 because there was only one file that started with L, so pressing tab completed the name of the file, ListExamples.java.
+
+`<ctrl> + w` is a shortcut that allows you to search for string patterns while editing in nano. This allowed me to jump to the spot in the file containing the error, rather than pressing the down arrow numerous times to get there. 
+
+`<ctrl> + o` and `<ctrl> + x` save and exit a file (respectively) after editing it in nano. This makes it easy to edit files from the command lines, and to switch between editing and running commands, or perhaps another file.
+
+
+
